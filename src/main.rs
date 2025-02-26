@@ -53,6 +53,35 @@ fn main() {
 
     // handle arguments
     if let Some(item) = matches.get_one::<String>("add") {
-        println!("Adding: {}", item);
+        add(item.to_string());
     }
+    else if let Some(item) = matches.get_one::<String>("remove") {
+        remove(item.to_string());
+    }
+    else if let Some(item) = matches.get_one::<String>("complete") {
+        complete(item.to_string());
+    }
+    else if let Some(item) = matches.get_one::<String>("uncomplete") {
+        uncomplete(item.to_string());
+    }
+    else if matches.get_flag("list") {
+        list();
+    }
+
+}
+
+fn add(item: String) {
+    println!("Adding: {}", item);
+}
+fn remove(item: String) {
+    println!("Removing: {}", item);
+}
+fn complete(item: String) {
+    println!("Marked: {} as Complete", item);
+}
+fn uncomplete(item: String) {
+    println!("Unmarking: {} as Complete", item);
+}
+fn list() {
+    println!("Todo");
 }
