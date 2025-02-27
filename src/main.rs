@@ -35,7 +35,7 @@ fn main() {
                 .short('a')  // flag argument e.g. : 'todo -a [item]'
                 .long("add")  // alternative flag item e.g. : 'todo --add [item]'
                 .value_name("ITEM")  // input requremnet usually ment for help and error messages
-                .help("Add a new todo item")  // help message
+                .help("Add a new todo item.\nFor items with morw than one word add \"\" ")  // help message
                 .num_args(1..)  // allows for multiple inputs
                 .action(ArgAction::Append)
                 .value_parser(clap::value_parser!(String))  // Define value type to input
@@ -45,7 +45,7 @@ fn main() {
                 .short('r')  // flag argument e.g. : 'todo -r [item]'
                 .long("remove")  // alternative flag item e.g. : 'todo --remove [item]'
                 .value_name("ITEM")  // input requremnet usually ment for help and error messages
-                .help("Remove a todo item")  // help message
+                .help("Remove a todo item.\nFor items with more than one word add \"\" ")  // help message
                 .num_args(1..)  // allows for multiple inputs
                 .action(ArgAction::Append)
                 .value_parser(clap::value_parser!(String))  // Define value type to input
@@ -55,7 +55,7 @@ fn main() {
                 .short('c')  // flag argument e.g. : 'todo -c [item]'
                 .long("complete")  // alternative flag item e.g. : 'todo --complete [item]'
                 .value_name("ITEM")  // input requremnet usually ment for help and error messages
-                .help("Mark a todo item as complete")  // help message
+                .help("Mark a todo item as complete.\nFor items with more than one word add \"\" ")  // help message
                 .num_args(1..)  // allows for multiple inputs
                 .action(ArgAction::Append)
                 .value_parser(clap::value_parser!(String))  // Define value type to input
@@ -65,7 +65,7 @@ fn main() {
                 .short('u')  // flag argument e.g. : 'todo -u [item]'
                 .long("uncomplete")  // alternative flag item e.g. : 'todo --uncomplete [item]'
                 .value_name("ITEM")  // input requremnet usually ment for help and error messages
-                .help("Unmark a todo item as complete")  // help message
+                .help("Unmark a todo item as complete.\nFor items with more than one word add \"\" ")  // help message
                 .num_args(1..)  // allows for multiple inputs
                 .action(ArgAction::Append)
                 .value_parser(clap::value_parser!(String))  // Define value type to input
