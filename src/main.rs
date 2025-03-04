@@ -33,7 +33,7 @@ fn main() {
                 .short('a')  // flag argument e.g. : 'todo -a [item]'
                 .long("add")  // alternative flag item e.g. : 'todo --add [item]'
                 .value_name("ITEM")  // input requremnet usually ment for help and error messages
-                .help("Add a new todo item.\nFor items with morw than one word add \"\" ")  // help message
+                .help("Add a new todo item.\nFor items with more than one word add \"\" ")  // help message
                 .num_args(1..)  // allows for multiple inputs
                 .action(ArgAction::Append)
                 .value_parser(clap::value_parser!(String))  // Define value type to input
